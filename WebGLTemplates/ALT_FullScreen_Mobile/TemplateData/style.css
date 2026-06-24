@@ -1,0 +1,88 @@
+/* ALT-MOD 2 */
+
+html, body {
+    width: 100%; 
+    height: 100%; 
+    height: 100dvh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    background: #181928;
+    touch-action: manipulation;
+
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#unity-container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+}
+
+#unity-container.unity-desktop {
+    width: 100vw;
+    height: 100%;
+    height: 100vh
+}
+
+#unity-container.unity-mobile {
+    width: 100vw;
+    height: 100%;
+    height: 100vh
+}
+
+#unity-canvas {
+    background: #181928;
+    width: 100% !important; 
+    height: 100% !important; 
+    padding: 0;
+    margin: 0;
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    object-fit: fill;
+}
+
+.unity-mobile #unity-canvas {
+    width: 100% !important;
+    width: 100vw;
+    height: 100% !important;
+    height: 100vh
+}
+
+#unity-loading-bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none
+}
+
+#unity-logo {
+    width: 160px;
+    height: 160px;
+    background: url('loading-logo.gif') no-repeat center
+}
+
+#unity-progress-bar-empty {
+    width: 161px;
+    height: 38px;
+    margin-top: 10px;
+    background: url('progress-bar-empty-dark.png') no-repeat center
+}
+
+#unity-progress-bar-full {
+    width: 0%;
+    height: 38px;
+    margin-top: 10px;
+    background: url('progress-bar-full-dark.png') no-repeat center
+}
