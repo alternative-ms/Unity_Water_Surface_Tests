@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 47e0898b5d3eabf458b03bae4ec2f2dd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 180047
+  packageName: FullscreenWebGL
+  packageVersion: 2.0
+  assetPath: Assets/MarksAssets/FullscreenWebGL/Scripts/FullscreenWebGL.cs
+  uploadId: 483090
