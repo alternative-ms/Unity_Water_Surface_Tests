@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Fake_Liquid_Tests_Build-In/Scenes/Level1_Scene.unity
+    path: Assets/Water_Surface_Tests_Build-In/Level1_BasicShaderMods/Level1_Scene.unity
     guid: 757636b4578bc924bac7e7fb92526710
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
