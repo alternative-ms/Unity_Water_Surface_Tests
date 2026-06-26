@@ -2,8 +2,8 @@ Shader "Custom/Level1_Pearlescent_Chameleon"
 {
     Properties
     {
-        _MainColor ("Base Color (Center)", Color) = (0.5, 0.0, 0.5, 1.0)
-        _ChameleonColor ("Chameleon Color (Fresnel)", Color) = (0.0, 1.0, 1.0, 1.0)
+        _Color ("Base Color (Center)", Color) = (0.5, 0.0, 0.5, 1.0)
+        _RimColor ("Chameleon Color (Fresnel)", Color) = (0.0, 1.0, 1.0, 1.0)
         _FresnelPower ("Fresnel Power", Range(0.001, 8.0)) = 1.0
         _FresnelMultipler ("Fresnel Multipler", Range(0, 4)) = 1.0
         _Cube ("Custom Cubemap", Cube) = "_Skybox" {}
@@ -14,6 +14,7 @@ Shader "Custom/Level1_Pearlescent_Chameleon"
     SubShader
     {
         Tags { "RenderType"="Opaque" }
+        Cull Back
         LOD 200
 
         CGPROGRAM
@@ -28,8 +29,8 @@ Shader "Custom/Level1_Pearlescent_Chameleon"
                 float3 worldRefl;
             };
 
-            fixed4 _MainColor;
-            fixed4 _ChameleonColor;
+            fixed4 _Color;
+            fixed4 _RimColor;
             half _FresnelPower;
             half _FresnelMultipler;
 
@@ -42,7 +43,7 @@ Shader "Custom/Level1_Pearlescent_Chameleon"
             {
                 half fresnel = 1.0 - saturate(dot(normalize(IN.viewDir), o.Normal));
                 half colorFresnel = pow(fresnel, _FresnelPower) * _FresnelMultipler;
-                fixed4 finalColor = lerp(_MainColor, _ChameleonColor, colorFresnel);
+                fixed4 finalColor = lerp(_Color, _RimColor, colorFresnel);
                 o.Albedo = finalColor.rgb;
                 half mipLevel = _Roughness * 8.0; 
                 fixed4 reflection = UNITY_SAMPLE_TEXCUBE_LOD(_Cube, IN.worldRefl, mipLevel);
