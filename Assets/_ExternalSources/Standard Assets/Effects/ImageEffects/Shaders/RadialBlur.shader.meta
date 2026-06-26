@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: f58445347fe2e4b8396487ed2bfa02ad
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55174
+  packageName: Free HDRI maps
+  packageVersion: 1.0
+  assetPath: Assets/freeHDRI_assets/Standard Assets/Effects/ImageEffects/Shaders/RadialBlur.shader
+  uploadId: 108477
