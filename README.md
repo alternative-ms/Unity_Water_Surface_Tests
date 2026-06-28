@@ -9,3 +9,6 @@ Level 2 - Basic plane mesh deformation based on perlin noise
 
 Level 3 - Basic heightmap painting based on RenderTexture, with simple color ramp shader
 <img width="1280" height="720" alt="preview_level3" src="https://github.com/user-attachments/assets/3de3c093-a9e0-49ac-98b7-e9c87eaf9cb1" />
+
+Level 4.1 - Basic waves based on blink'n'fade particles and RenderTexture
+<img width="1280" height="720" alt="preview_level4-1" src="https://github.com/user-attachments/assets/df6ba960-693a-45cc-99ac-b57e89f7a988" />
