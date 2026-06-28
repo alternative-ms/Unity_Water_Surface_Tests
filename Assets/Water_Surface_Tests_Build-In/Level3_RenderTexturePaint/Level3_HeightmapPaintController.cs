@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class HeightmapPaintController : MonoBehaviour
+public class Level3_HeightmapPaintController : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Camera paintCamera;
