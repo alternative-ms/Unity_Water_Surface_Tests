@@ -71,7 +71,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _ColorAmp: 0.1
-    - _CustomTime: 122.57756
+    - _CustomTime: 3.809924
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0

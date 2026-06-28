@@ -11,8 +11,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Water_Surface_Tests_Build-In/Level2_BasicNoiseDisplacement/Level2_Scene.unity
     guid: 017a18a6dce98c54b934bfe20177efc3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Water_Surface_Tests_Build-In/Level3_RenderTexturePaint/Level3_Scene.unity
     guid: ec2f44f823f79ff4d86acb178109ba14
+  - enabled: 1
+    path: Assets/Water_Surface_Tests_Build-In/Level4_RenderTextureWaves_Test1/Level4_Test1_Scene.unity
+    guid: 2f3d330c4ee75b44e86dba2b627191be
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
