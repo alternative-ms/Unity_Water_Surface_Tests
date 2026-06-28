@@ -1,4 +1,4 @@
-# Unity_Water_Surface_Tests
+# Unity6 WebGL Water Surface Tests (Build-In, URP comming soon)
 a bunch of defferent water fx tests, based on water plane mesh and etc
 
 Level 1 - Basic custom shader example:
@@ -12,3 +12,6 @@ Level 3 - Basic heightmap painting based on RenderTexture, with simple color ram
 
 Level 4.1 - Basic waves based on blink'n'fade particles and RenderTexture
 <img width="1280" height="720" alt="preview_level4-1" src="https://github.com/user-attachments/assets/df6ba960-693a-45cc-99ac-b57e89f7a988" />
+
+Level 4.2 - Basic waves based on advanced blink'n'fade particles and RenderTexture
+<img width="1280" height="720" alt="preview_level4-2" src="https://github.com/user-attachments/assets/e5cb6515-172d-4b83-83a1-e5f5d7fdb77c" />
