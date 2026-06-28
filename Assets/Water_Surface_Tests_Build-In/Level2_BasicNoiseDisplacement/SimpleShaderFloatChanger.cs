@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SimpleShaderFloatChanger : MonoBehaviour
@@ -8,7 +7,6 @@ public class SimpleShaderFloatChanger : MonoBehaviour
 
     public float minValue = 0.5f;
     public float maxValue = 3.5f;
-
     public void OnChangeFloat(float floatValue)
     {
         material.SetFloat(floatName, Mathf.Lerp(minValue, maxValue, floatValue));

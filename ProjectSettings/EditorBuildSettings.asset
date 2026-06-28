@@ -14,8 +14,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Water_Surface_Tests_Build-In/Level3_RenderTexturePaint/Level3_Scene.unity
     guid: ec2f44f823f79ff4d86acb178109ba14
-  - enabled: 1
+  - enabled: 0
     path: Assets/Water_Surface_Tests_Build-In/Level4_RenderTextureWaves_Test1/Level4_Test1_Scene.unity
     guid: 2f3d330c4ee75b44e86dba2b627191be
+  - enabled: 1
+    path: Assets/Water_Surface_Tests_Build-In/Level4_RenderTextureWaves_Test2/Level4_Test2_Scene.unity
+    guid: 1590c79fa4178c744a2de2c76c2ce167
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
