@@ -1,3 +1,4 @@
+// Created by Alexander Tkachenko aka ALT , ALTernative.MS https://www.artstation.com/alternative_ms
 Shader "Custom/Level5_Test0_VertexDisplacement_ColorRamp"
 {
     Properties
@@ -22,69 +23,69 @@ Shader "Custom/Level5_Test0_VertexDisplacement_ColorRamp"
         LOD 300
 
         CGPROGRAM
-        #pragma surface surf Standard fullforwardshadows vertex:disp addshadow
-        #pragma target 3.0
+            #pragma surface surf Standard fullforwardshadows vertex:disp addshadow
+            #pragma target 3.0
 
-        sampler2D _MainTex;
-        sampler2D _DispTex;
-        sampler2D _RampTex;
-        float _Displacement;
-        float _TexelSizeStep;
+            sampler2D _MainTex;
+            sampler2D _DispTex;
+            sampler2D _RampTex;
+            float _Displacement;
+            float _TexelSizeStep;
         
-        fixed4 _LowColor;
-        fixed4 _ZeroColor;
-        fixed4 _HeightColor;
-        float _ColorRange;
-        float _ColorOffset;
+            fixed4 _LowColor;
+            fixed4 _ZeroColor;
+            fixed4 _HeightColor;
+            float _ColorRange;
+            float _ColorOffset;
 
-        half _Glossiness;
-        half _Metallic;
+            half _Glossiness;
+            half _Metallic;
 
-        struct Input
-        {
-            float2 uv_MainTex;
-            float customHeight; 
-        };
+            struct Input
+            {
+                float2 uv_MainTex;
+                float customHeight; 
+            };
 
-        float getHeight(float2 uv)
-        {
-            float rawColor = tex2Dlod(_DispTex, float4(uv, 0, 0)).r;
-            return rawColor * _Displacement;
-        }
+            float getHeight(float2 uv)
+            {
+                float rawColor = tex2Dlod(_DispTex, float4(uv, 0, 0)).r;
+                return rawColor * _Displacement;
+            }
 
-        void disp(inout appdata_full v, out Input o)
-        {
-            UNITY_INITIALIZE_OUTPUT(Input, o);
-            float2 uv = v.texcoord.xy;
+            void disp(inout appdata_full v, out Input o)
+            {
+                UNITY_INITIALIZE_OUTPUT(Input, o);
+                float2 uv = v.texcoord.xy;
 
-            float hCurrent = getHeight(uv);
-            v.vertex.y += hCurrent;
-            o.customHeight = v.vertex.y; 
+                float hCurrent = getHeight(uv);
+                v.vertex.y += hCurrent;
+                o.customHeight = v.vertex.y; 
 
-            float hL = getHeight(uv - float2(_TexelSizeStep, 0));
-            float hR = getHeight(uv + float2(_TexelSizeStep, 0));
-            float hD = getHeight(uv - float2(0, _TexelSizeStep));
-            float hU = getHeight(uv + float2(0, _TexelSizeStep));
+                float hL = getHeight(uv - float2(_TexelSizeStep, 0));
+                float hR = getHeight(uv + float2(_TexelSizeStep, 0));
+                float hD = getHeight(uv - float2(0, _TexelSizeStep));
+                float hU = getHeight(uv + float2(0, _TexelSizeStep));
 
-            float3 normal = float3(hL - hR, _TexelSizeStep * 2.0, hD - hU);
-            v.normal = normalize(normal);
-        }
+                float3 normal = float3(hL - hR, _TexelSizeStep * 2.0, hD - hU);
+                v.normal = normalize(normal);
+            }
 
-        void surf (Input IN, inout SurfaceOutputStandard o)
-        {
-            fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
-            
-            float heightMask = (IN.customHeight - _ColorOffset) * _ColorRange;
+            void surf (Input IN, inout SurfaceOutputStandard o)
+            {
+                fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
 
-            float rampUV = saturate(heightMask * 0.5 + 0.5);
+                float heightMask = (IN.customHeight - _ColorOffset) * _ColorRange;
 
-            fixed4 finalColor = tex2D(_RampTex, float2(rampUV, 0.5));
+                float rampUV = saturate(heightMask * 0.5 + 0.5);
 
-            o.Albedo = c.rgb * finalColor.rgb;
-            o.Metallic = _Metallic;
-            o.Smoothness = _Glossiness;
-            o.Alpha = c.a;
-        }
+                fixed4 finalColor = tex2D(_RampTex, float2(rampUV, 0.5));
+
+                o.Albedo = c.rgb * finalColor.rgb;
+                o.Metallic = _Metallic;
+                o.Smoothness = _Glossiness;
+                o.Alpha = c.a;
+            }
         ENDCG
     }
     FallBack "Diffuse"

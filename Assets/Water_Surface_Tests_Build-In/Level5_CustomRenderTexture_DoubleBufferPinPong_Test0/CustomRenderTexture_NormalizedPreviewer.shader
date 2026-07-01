@@ -1,4 +1,5 @@
-﻿Shader "Custom/CustomRenderTexture_NormalizedPreviewer"
+﻿// Created by Alexander Tkachenko aka ALT , ALTernative.MS https://www.artstation.com/alternative_ms
+Shader "Custom/CustomRenderTexture_NormalizedPreviewer"
 {
     Properties
     {
@@ -42,15 +43,13 @@
                     return o;
                 }
 
-                fixed4 frag (v2f i) : SV_Target
+                float4 frag (v2f i) : SV_Target
                 {
-                    float4 crtData = tex2D(_MainTex, i.uv);
-                
-                    float rawValue = crtData.r; // color in [-1..1]
-
-                    float normalizedColor = rawValue * 0.5 + 0.5; // now color [0..1]
-
-                    return fixed4(normalizedColor, normalizedColor, normalizedColor, 1.0);
+                    float4 rawData = tex2D(_MainTex, i.uv);
+                    float rawValue = rawData.r; 
+                    float normalizedColor = rawValue * 0.5 + 0.5;
+                    float correctedColor = pow(max(0.0, normalizedColor), 2.2);
+                    return float4(correctedColor, correctedColor, correctedColor, 1.0);
                 }
             ENDCG
         }

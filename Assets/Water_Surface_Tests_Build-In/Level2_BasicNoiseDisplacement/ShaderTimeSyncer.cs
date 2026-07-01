@@ -1,4 +1,4 @@
-// this simple script used as a replecement of a shader's build _Time.y to fix shadows cast issues
+// Created by Alexander Tkachenko aka ALT , ALTernative.MS https://www.artstation.com/alternative_ms
 using UnityEngine;
 
 [ExecuteInEditMode]

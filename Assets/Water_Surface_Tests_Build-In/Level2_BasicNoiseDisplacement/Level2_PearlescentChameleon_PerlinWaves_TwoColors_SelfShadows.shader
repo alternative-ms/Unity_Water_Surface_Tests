@@ -1,3 +1,4 @@
+// Created by Alexander Tkachenko aka ALT , ALTernative.MS https://www.artstation.com/alternative_ms
 Shader "Custom/Level2_PearlescentChameleon_PerlinWaves_TwoColors_SelfShadows"
 {
     Properties

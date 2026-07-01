@@ -1,4 +1,5 @@
-﻿Shader "Custom/Level5_Test0_CustomRenderTexture_ColorPinPong"
+﻿// Created by Alexander Tkachenko aka ALT , ALTernative.MS https://www.artstation.com/alternative_ms
+Shader "Custom/Level5_Test0_CustomRenderTexture_ColorPinPong"
 {
     Properties
     {

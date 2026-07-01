@@ -1,7 +1,7 @@
+// Created by Alexander Tkachenko aka ALT , ALTernative.MS https://www.artstation.com/alternative_ms
 using UnityEngine;
-using UnityEngine.AdaptivePerformance.Provider;
 
-public class CustomRenderTexture_ColorPinPong_Controller : MonoBehaviour
+public class Level5_Test0_CustomRenderTexture_ColorPinPong_Controller : MonoBehaviour
 {
     [SerializeField] private CustomRenderTexture _customRenderTexture;
     [SerializeField] private int _iterationsPerFrame = 1;

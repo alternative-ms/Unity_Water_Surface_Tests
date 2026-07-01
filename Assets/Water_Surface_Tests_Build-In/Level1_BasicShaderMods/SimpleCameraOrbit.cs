@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// Created by Alexander Tkachenko aka ALT , ALTernative.MS https://www.artstation.com/alternative_ms
+using UnityEngine;
 
 public class SimpleCameraOrbit : MonoBehaviour
 {

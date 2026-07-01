@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Level5_Test1_CustomRenderTexture_SlowMo
+  m_Shader: {fileID: 4800000, guid: 0618350152226e744a35b921957ce2b0, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BrushPaintTex:
+        m_Texture: {fileID: 8400000, guid: ab85a946eccce6f41bc1aec3b893355f, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: bc4937b92b894e34a8663e3e54d32457, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TestPatchTex:
+        m_Texture: {fileID: 2800000, guid: d095169e42fdc4143b74ffb76b46d085, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Atten: 0.999
+    - _BrushForce: 1
+    - _BrushVelocityMinMax: 0.015
+    - _DampingSpeed: 0.999999
+    - _DeltaUV: 1
+    - _LerpSpeed: 0.01
+    - _LerpSpeed2: 0.4
+    - _MicroNoiseFilter: 0.005
+    - _NoiseScale: 0.5
+    - _NoiseSpeed: 1
+    - _NoiseStrength: 0.00001
+    - _OscillationSpeed: 50
+    - _S2: 0.2
+    - _Speed: 1
+    - _SpringReturn: 0.0001
+    - _WavePropagation: 0.2
+    m_Colors: []
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
