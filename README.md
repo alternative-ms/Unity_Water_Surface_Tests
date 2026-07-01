@@ -15,3 +15,6 @@ Level 4.1 - Basic waves based on blink'n'fade particles and RenderTexture ( http
 
 Level 4.2 - Basic waves based on advanced blink'n'fade particles and RenderTexture ( https://alternative-ms.github.io/WebGLU6_Test1/WebGL_Water_Surface_Tests_Level4_2/ )
 <img width="1280" height="720" alt="preview_level4-2" src="https://github.com/user-attachments/assets/e5cb6515-172d-4b83-83a1-e5f5d7fdb77c" />
+
+Level 5.2 - Waves simulation based on CustomRenderTexture and some advanced surface shader ( https://alternative-ms.github.io/WebGLU6_Test1/WebGL_Water_Surface_Tests_Level5/ )
+<img width="1280" height="720" alt="preview_level5-2" src="https://github.com/user-attachments/assets/834c1b6e-8cd5-4f12-9721-3fe4f0c3b7c5" />
